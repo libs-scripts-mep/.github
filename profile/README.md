@@ -8,6 +8,7 @@
   - [Criando um novo pacote](#criando-um-novo-pacote)
   - [Publicando pela primeira vez um pacote](#publicando-pela-primeira-vez-um-pacote)
   - [Versionando e publicando um pacote](#versionando-e-publicando-um-pacote)
+  - [⚠️ ATENÇÃO!](#️-atenção)
 
 # npm
 
@@ -63,7 +64,7 @@ No repositório do script, abra o terminal e execute o comando ```npm update``` 
 
 ## Criando um novo pacote
 
-Após realizar o primeiro commit do seu novo pacote npm, no repositório do mesmo, abra o terminal e execute o comando: 
+Após realizar o primeiro commit/push do seu novo pacote npm, no repositório do mesmo, abra o terminal e execute o comando: 
 
 ```npm init --scope=libs-scripts-mep```
 
@@ -84,3 +85,9 @@ Após realizar os commits das alterações na sua biblioteca, abra o terminal no
 Em seguida execute o comando ```npm publish --access public``` para publicar a nova versão.
 
 A partir desse momento, qualquer script que contenha esse pacote, se utilizado o comando ```npm update```, receberá a nova versão.
+
+## ⚠️ ATENÇÃO!
+
+Após realizar a publicação no npm, crie uma release contendo o mesmo nome da versão no respectivo repositório git, como nas imagens a seguir.
+
+![Image](https://i.imgur.com/Z3PVGMm.png =360x130)  ![Image](https://i.imgur.com/ZVNsyZW.png =308x130)
