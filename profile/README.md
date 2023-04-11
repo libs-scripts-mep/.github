@@ -1,6 +1,6 @@
 # Bibliotecas de Script do M&P
 
-- [Bibliotecas de Script do M&P](#bibliotecas-de-script-do-mp)
+- [Bibliotecas de Script do M\&P](#bibliotecas-de-script-do-mp)
 - [npm](#npm)
   - [Criando usuário npm](#criando-usuário-npm)
   - [Fazendo login via CLI - Command-Line Interface](#fazendo-login-via-cli---command-line-interface)
@@ -80,14 +80,17 @@ Nesse momento, ele estará disponível em [libs-scripts-mep](https://www.npmjs.c
 
 ## Versionando e publicando um pacote
 
-Após realizar os commits das alterações na sua biblioteca, abra o terminal no repositório do pacote e execute o comando ```npm version x.x.x```, sendo ```x.x.x``` sua nova versão. O arquivo ***package.json*** será atualizado com a nova versão.
+1. Realize um commit contendo as alterações na sua biblioteca, para que seja possível realizar o versionamento.
+2. Abra o terminal no repositório do pacote e execute o comando ```npm version x.x.x```, sendo ```x.x.x``` sua nova versão. O comando fará duas coisas:
+   1. O arquivo ***package.json*** será atualizado com a nova versão.
+   2. Será realizado mais um commit silencioso. Não esqueça de dar ***push*** para o servidor ***git*** apenas depois desse comando.
+   ![Image](https://i.imgur.com/oeXhHFA.png)
+3. Finalmente, execute o comando ```npm publish --access public``` para publicar a nova versão no servidor ***npm***.
 
-Em seguida execute o comando ```npm publish --access public``` para publicar a nova versão.
-
-A partir desse momento, qualquer script que contenha esse pacote, se utilizado o comando ```npm update```, receberá a nova versão.
+A partir desse momento, qualquer script que contenha esse pacote, se utilizado o comando ```npm update```, receberá a nova versão, desde que sua politica de atualização permita.
 
 ## ⚠️ ATENÇÃO!
 
 Após realizar a publicação no npm, crie uma release contendo o mesmo nome da versão no respectivo repositório git, como nas imagens a seguir.
 
-![Image](https://i.imgur.com/Z3PVGMm.png =360x130)  ![Image](https://i.imgur.com/ZVNsyZW.png =308x130)
+![Image](https://i.imgur.com/Z3PVGMm.png)  ![Image](https://i.imgur.com/ZVNsyZW.png)
